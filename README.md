@@ -10,67 +10,6 @@ A simple and efficient AI-powered Helpdesk system where users can register compl
  
 ---
 
-## 📁 Project Structure
-
-```
-HelpDesk-Agent/
-│
-├── .venv/                                 # Virtual environment (Python)
-├── .env                                   # Environment variables (secrets, configs)
-├── .gitignore                             # Git ignore rules
-├── LICENSE                                # License file
-├── pyproject.toml                         # Project dependencies & metadata
-├── docker-compose-chat-service.yml       # Docker Compose for chat microservice
-├── docker-compose-frontend.yml           # Docker Compose for frontend service
-├── docker-compose-mongodb-service.yml    # Docker Compose for MongoDB microservice
-│
-├── backend/
-│   ├── chat_service/
-│   │   ├── app/
-│   │   │   ├── apis/
-│   │   │   │   ├── apis_clients.py
-│   │   │   │   └── chat_routes.py
-│   │   │   ├── core/
-│   │   │   │   ├── clients.py
-│   │   │   │   └── config.py
-│   │   │   ├── gemini/
-│   │   │   │   ├── gemini_history.py
-│   │   │   │   ├── gemini_llm.py
-│   │   │   │   ├── gemini_tools.py
-│   │   │   │   └── system_prompt.py
-│   │   │   ├── models/
-│   │   │   │   └── data_models.py
-│   │   ├── main.py                        # Entry point for chat service
-│   │   └── Dockerfile
-│
-│   ├── mongodb_service/
-│   │   ├── app/
-│   │   │   ├── apis/
-│   │   │   │   ├── apis_clients.py
-│   │   │   │   └── mongodb_routes.py
-│   │   │   ├── core/
-│   │   │   │   ├── clients.py
-│   │   │   │   └── config.py
-│   │   │   ├── models/
-│   │   │   │   ├── data_models.py
-│   │   │   │   └── db_schemas.py
-│   │   │   ├── mongodb/
-│   │   │   │   ├── __init__.py
-│   │   │   │   └── db_connections.py
-│   │   ├── main.py                        # Entry point for MongoDB service
-│   │   └── Dockerfile
-│
-├── frontend/
-│   ├── apis/
-│   │   └── apis_clients.py
-│   ├── images/
-│   ├── streamlit_ui.py                   # Main Streamlit app UI
-│   └── Dockerfile
-
-```
-
----
-
 ## 🚀 Features
 
 * 📝 Register user complaints
@@ -107,14 +46,6 @@ python -m venv .venv
 
 # Unix/MacOS
 source .venv/bin/activate
-```
-
-### 3. Install Dependencies
-
-Make sure you have [**uv**](https://github.com/astral-sh/uv) installed.
-
-```bash
-uv sync
 ```
 
 ### 4. Run the Backend Services
